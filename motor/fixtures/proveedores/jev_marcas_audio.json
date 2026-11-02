@@ -1,0 +1,112 @@
+{
+  "answers": {
+    "categoria": {
+      "choice": "desconocido",
+      "confidence": 0.96,
+      "probabilities": {
+        "Salud & Nutrición": 0.004,
+        "Gastronomía": 0.004,
+        "Lifestyle": 0.004,
+        "Moda & Belleza": 0.004,
+        "Viajes": 0.004,
+        "Deportes & Fitness": 0.004,
+        "Familia & Crianza": 0.004,
+        "Tecnología": 0.004,
+        "Entretenimiento": 0.004,
+        "Otros": 0.004,
+        "desconocido": 0.96
+      }
+    },
+    "audiencia_a_edad": {
+      "choice": "25-34",
+      "confidence": 0.96,
+      "probabilities": {
+        "13-17": 0.005714285714285714,
+        "18-24": 0.005714285714285714,
+        "25-34": 0.005714285714285714,
+        "35-44": 0.005714285714285714,
+        "45-54": 0.005714285714285714,
+        "55-64": 0.005714285714285714,
+        "65+": 0.005714285714285714,
+        "desconocido": 0.96
+      }
+    },
+    "audiencia_a_genero": {
+      "choice": "desconocido",
+      "confidence": 0.96,
+      "probabilities": {
+        "Female": 0.02,
+        "Male": 0.02,
+        "desconocido": 0.96
+      }
+    },
+    "audiencia_a_ciudad": {
+      "choice": "Lima",
+      "confidence": 0.96,
+      "probabilities": {
+        "Lima": 0.0044444444444444444,
+        "Arequipa": 0.0044444444444444444,
+        "Trujillo": 0.0044444444444444444,
+        "Cusco": 0.0044444444444444444,
+        "Chiclayo": 0.0044444444444444444,
+        "Piura": 0.0044444444444444444,
+        "Huancayo": 0.0044444444444444444,
+        "Iquitos": 0.0044444444444444444,
+        "Otra": 0.0044444444444444444,
+        "desconocido": 0.96
+      }
+    },
+    "marca_06e63f641eca2a9674f0": {
+      "choice": "colab",
+      "confidence": 0.96,
+      "probabilities": {
+        "publicidad": 0.008,
+        "colab": 0.96,
+        "canje": 0.008,
+        "etiqueta": 0.008,
+        "amigo_fotografo": 0.008,
+        "desconocido": 0.008
+      }
+    },
+    "descripcion_rol": {
+      "choice": "nutricionista",
+      "confidence": 0.9,
+      "probabilities": {}
+    },
+    "descripcion_nicho": {
+      "choice": "gastronomía",
+      "confidence": 0.9,
+      "probabilities": {}
+    },
+    "creador_genero": {
+      "choice": "Female",
+      "confidence": 0.9,
+      "probabilities": {}
+    },
+    "audiencia_a_segmento": {
+      "type": "choice",
+      "choice": "Male 25-34",
+      "confidence": 0.9,
+      "probabilities": {
+        "Female 13-17": 0.0,
+        "Female 18-24": 0.0,
+        "Female 25-34": 0.0,
+        "Female 35-44": 0.0,
+        "Female 45-54": 0.0,
+        "Female 55-64": 0.0,
+        "Female 65+": 0.0,
+        "Male 13-17": 0.0,
+        "Male 18-24": 0.0,
+        "Male 25-34": 1.0,
+        "Male 35-44": 0.0,
+        "Male 45-54": 0.0,
+        "Male 55-64": 0.0,
+        "Male 65+": 0.0
+      }
+    }
+  },
+  "usage": {
+    "input_tokens": 800,
+    "output_tokens": 60
+  }
+}

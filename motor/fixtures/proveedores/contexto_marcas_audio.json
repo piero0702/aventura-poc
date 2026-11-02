@@ -1,0 +1,36 @@
+{
+  "perfil": {
+    "usuario": "cuenta.ficticia1",
+    "nombre": "Ficticia Uno",
+    "bio": "Nutricionista en Lima. Contenido para mujeres adultas.",
+    "categoria": "Nutritionist",
+    "followers": 107200,
+    "privada": false,
+    "verificada": true,
+    "existe": true,
+    "posts": [
+      {
+        "id": "reel1",
+        "url": "https://www.instagram.com/reel/PRUEBA1/",
+        "tipo": "reel",
+        "fecha": "2026-10-20T12:00:00.000Z",
+        "likes": 900,
+        "comentarios": 65,
+        "vistas": 28400,
+        "likes_ocultos": false,
+        "caption": "",
+        "menciones": [],
+        "coautores": [],
+        "patrocinado": false,
+        "patrocinadores": [],
+        "duracion_segundos": 60.0,
+        "audio_url": "https://cdn.example.org/audio1.mp4"
+      }
+    ]
+  },
+  "transcripciones": {
+    "https://www.instagram.com/reel/PRUEBA1/": "Este episodio es en colaboración con Nike. Me enviaron estas zapatillas para correr."
+  },
+  "seguidores": [],
+  "brief": {}
+}

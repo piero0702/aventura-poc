@@ -1,0 +1,30 @@
+[
+  {
+    "id": "reel1",
+    "url": "https://www.instagram.com/reel/PRUEBA1/",
+    "type": "Video",
+    "productType": "clips",
+    "caption": "Publicidad @marca.sintetica. Foto @foto.sintetica",
+    "likesCount": 900,
+    "commentsCount": 65,
+    "videoViewCount": 28400,
+    "timestamp": "2026-10-20T12:00:00.000Z",
+    "videoDuration": 60,
+    "audioUrl": "https://cdn.example.org/audio1.mp4",
+    "mentions": [
+      "marca.sintetica",
+      "foto.sintetica"
+    ],
+    "coauthorProducers": [
+      {
+        "username": "foto.sintetica"
+      }
+    ],
+    "paidPartnership": true,
+    "sponsors": [
+      {
+        "username": "marca.sintetica"
+      }
+    ]
+  }
+]

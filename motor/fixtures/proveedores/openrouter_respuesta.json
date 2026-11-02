@@ -1,0 +1,13 @@
+{
+  "choices": [
+    {
+      "message": {
+        "content": "{\"categoria\": \"Salud & Nutrición\", \"marcas\": [{\"nombre\": \"marca.sintetica\", \"tipo\": \"publicidad\", \"post_evidencia\": \"https://www.instagram.com/reel/PRUEBA1/\"}], \"audiencia_a\": {\"edad\": \"25-34\", \"genero\": \"Female\", \"ciudad\": \"Lima\"}, \"seguidores\": [{\"usuario\": \"persona.dos\", \"edad\": \"35-44\", \"genero\": \"Male\", \"persona_real\": true}, {\"usuario\": \"persona.uno\", \"edad\": \"25-34\", \"genero\": \"Female\", \"persona_real\": true}, {\"usuario\": \"tienda.sintetica\", \"edad\": null, \"genero\": null, \"persona_real\": false}], \"encaje\": 4, \"motivo_encaje\": \"Contenido de salud dirigido al público del brief.\"}"
+      }
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1234,
+    "completion_tokens": 456
+  }
+}

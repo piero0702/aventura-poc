@@ -1,0 +1,336 @@
+{
+  "model": "jev-1.14.0",
+  "answers": {
+    "categoria": {
+      "type": "choice",
+      "choice": "Salud & Nutrición",
+      "confidence": 0.95,
+      "probabilities": {
+        "Salud & Nutrición": 1.0,
+        "Gastronomía": 0.0,
+        "Lifestyle": 0.0,
+        "Moda & Belleza": 0.0,
+        "Viajes": 0.0,
+        "Deportes & Fitness": 0.0,
+        "Familia & Crianza": 0.0,
+        "Tecnología": 0.0,
+        "Entretenimiento": 0.0,
+        "Otros": 0.0,
+        "desconocido": 0.0
+      }
+    },
+    "audiencia_a_edad": {
+      "type": "choice",
+      "choice": "25-34",
+      "confidence": 0.95,
+      "probabilities": {
+        "13-17": 0.0,
+        "18-24": 0.0,
+        "25-34": 1.0,
+        "35-44": 0.0,
+        "45-54": 0.0,
+        "55-64": 0.0,
+        "65+": 0.0,
+        "desconocido": 0.0
+      }
+    },
+    "audiencia_a_genero": {
+      "type": "choice",
+      "choice": "Female",
+      "confidence": 0.95,
+      "probabilities": {
+        "Female": 1.0,
+        "Male": 0.0,
+        "desconocido": 0.0
+      }
+    },
+    "audiencia_a_ciudad": {
+      "type": "choice",
+      "choice": "Lima",
+      "confidence": 0.95,
+      "probabilities": {
+        "Lima": 1.0,
+        "Arequipa": 0.0,
+        "Trujillo": 0.0,
+        "Cusco": 0.0,
+        "Chiclayo": 0.0,
+        "Piura": 0.0,
+        "Huancayo": 0.0,
+        "Iquitos": 0.0,
+        "Otra": 0.0,
+        "desconocido": 0.0
+      }
+    },
+    "seguidor:persona.uno:edad": {
+      "type": "choice",
+      "choice": "25-34",
+      "confidence": 0.95,
+      "probabilities": {
+        "13-17": 0.0,
+        "18-24": 0.0,
+        "25-34": 1.0,
+        "35-44": 0.0,
+        "45-54": 0.0,
+        "55-64": 0.0,
+        "65+": 0.0,
+        "desconocido": 0.0
+      }
+    },
+    "seguidor:persona.uno:genero": {
+      "type": "choice",
+      "choice": "Female",
+      "confidence": 0.95,
+      "probabilities": {
+        "Female": 1.0,
+        "Male": 0.0,
+        "desconocido": 0.0
+      }
+    },
+    "seguidor:persona.uno:real": {
+      "type": "choice",
+      "choice": "real",
+      "confidence": 0.95,
+      "probabilities": {
+        "real": 1.0,
+        "no_real": 0.0,
+        "desconocido": 0.0
+      }
+    },
+    "seguidor:persona.dos:edad": {
+      "type": "choice",
+      "choice": "35-44",
+      "confidence": 0.95,
+      "probabilities": {
+        "13-17": 0.0,
+        "18-24": 0.0,
+        "25-34": 0.0,
+        "35-44": 1.0,
+        "45-54": 0.0,
+        "55-64": 0.0,
+        "65+": 0.0,
+        "desconocido": 0.0
+      }
+    },
+    "seguidor:persona.dos:genero": {
+      "type": "choice",
+      "choice": "Male",
+      "confidence": 0.95,
+      "probabilities": {
+        "Female": 0.0,
+        "Male": 1.0,
+        "desconocido": 0.0
+      }
+    },
+    "seguidor:persona.dos:real": {
+      "type": "choice",
+      "choice": "real",
+      "confidence": 0.95,
+      "probabilities": {
+        "real": 1.0,
+        "no_real": 0.0,
+        "desconocido": 0.0
+      }
+    },
+    "seguidor:tienda.sintetica:edad": {
+      "type": "choice",
+      "choice": "desconocido",
+      "confidence": 0.95,
+      "probabilities": {
+        "13-17": 0.0,
+        "18-24": 0.0,
+        "25-34": 0.0,
+        "35-44": 0.0,
+        "45-54": 0.0,
+        "55-64": 0.0,
+        "65+": 0.0,
+        "desconocido": 1.0
+      }
+    },
+    "seguidor:tienda.sintetica:genero": {
+      "type": "choice",
+      "choice": "desconocido",
+      "confidence": 0.95,
+      "probabilities": {
+        "Female": 0.0,
+        "Male": 0.0,
+        "desconocido": 1.0
+      }
+    },
+    "seguidor:tienda.sintetica:real": {
+      "type": "choice",
+      "choice": "no_real",
+      "confidence": 0.95,
+      "probabilities": {
+        "real": 0.0,
+        "no_real": 1.0,
+        "desconocido": 0.0
+      }
+    },
+    "encaje": {
+      "type": "choice",
+      "choice": "4",
+      "confidence": 0.95,
+      "probabilities": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 1.0,
+        "5": 0.0,
+        "desconocido": 0.0
+      }
+    },
+    "motivo_encaje": {
+      "type": "choice",
+      "choice": "publico",
+      "confidence": 0.95,
+      "probabilities": {
+        "publico": 1.0,
+        "marca": 0.0,
+        "evitar": 0.0,
+        "bajo": 0.0,
+        "insuficiente": 0.0,
+        "desconocido": 0.0
+      }
+    },
+    "marca_6512c3b52ab44d830665": {
+      "type": "choice",
+      "choice": "amigo_fotografo",
+      "confidence": 0.95,
+      "probabilities": {
+        "publicidad": 0.0,
+        "colab": 0.0,
+        "canje": 0.0,
+        "etiqueta": 0.0,
+        "amigo_fotografo": 1.0,
+        "desconocido": 0.0
+      }
+    },
+    "marca_e8fcadc52c4925262404": {
+      "type": "choice",
+      "choice": "publicidad",
+      "confidence": 0.95,
+      "probabilities": {
+        "publicidad": 1.0,
+        "colab": 0.0,
+        "canje": 0.0,
+        "etiqueta": 0.0,
+        "amigo_fotografo": 0.0,
+        "desconocido": 0.0
+      }
+    },
+    "marca_ad4e6d1e6fb23ec96b58": {
+      "type": "choice",
+      "choice": "amigo_fotografo",
+      "confidence": 0.95,
+      "probabilities": {
+        "publicidad": 0.0,
+        "colab": 0.0,
+        "canje": 0.0,
+        "etiqueta": 0.0,
+        "amigo_fotografo": 1.0,
+        "desconocido": 0.0
+      }
+    },
+    "marca_10251712a0e296058015": {
+      "type": "choice",
+      "choice": "amigo_fotografo",
+      "confidence": 0.95,
+      "probabilities": {
+        "publicidad": 0.0,
+        "colab": 0.0,
+        "canje": 0.0,
+        "etiqueta": 0.0,
+        "amigo_fotografo": 1.0,
+        "desconocido": 0.0
+      }
+    },
+    "marca_0bba4929009f287eb86f": {
+      "type": "choice",
+      "choice": "publicidad",
+      "confidence": 0.95,
+      "probabilities": {
+        "publicidad": 1.0,
+        "colab": 0.0,
+        "canje": 0.0,
+        "etiqueta": 0.0,
+        "amigo_fotografo": 0.0,
+        "desconocido": 0.0
+      }
+    },
+    "marca_02705563009a9e1ad09c": {
+      "type": "choice",
+      "choice": "amigo_fotografo",
+      "confidence": 0.95,
+      "probabilities": {
+        "publicidad": 0.0,
+        "colab": 0.0,
+        "canje": 0.0,
+        "etiqueta": 0.0,
+        "amigo_fotografo": 1.0,
+        "desconocido": 0.0
+      }
+    },
+    "descripcion_rol": {
+      "choice": "nutricionista",
+      "confidence": 0.9,
+      "probabilities": {}
+    },
+    "descripcion_nicho": {
+      "choice": "gastronomía",
+      "confidence": 0.9,
+      "probabilities": {}
+    },
+    "creador_genero": {
+      "choice": "Female",
+      "confidence": 0.9,
+      "probabilities": {}
+    },
+    "tamano_1fa7f0f3f9b96be6263c": {
+      "type": "choice",
+      "choice": "grande",
+      "confidence": 0.9,
+      "probabilities": {
+        "grande": 1.0,
+        "mediana": 0.0,
+        "pequena": 0.0,
+        "desconocido": 0.0
+      }
+    },
+    "tamano_90fa70c09fd4dcd1c7db": {
+      "type": "choice",
+      "choice": "desconocido",
+      "confidence": 0.8,
+      "probabilities": {
+        "grande": 0.0,
+        "mediana": 0.0,
+        "pequena": 0.0,
+        "desconocido": 1.0
+      }
+    },
+    "audiencia_a_segmento": {
+      "type": "choice",
+      "choice": "Female 25-34",
+      "confidence": 0.7,
+      "probabilities": {
+        "Female 13-17": 0.0,
+        "Female 18-24": 0.1,
+        "Female 25-34": 0.7,
+        "Female 35-44": 0.0,
+        "Female 45-54": 0.0,
+        "Female 55-64": 0.0,
+        "Female 65+": 0.0,
+        "Male 13-17": 0.0,
+        "Male 18-24": 0.0,
+        "Male 25-34": 0.2,
+        "Male 35-44": 0.0,
+        "Male 45-54": 0.0,
+        "Male 55-64": 0.0,
+        "Male 65+": 0.0
+      }
+    }
+  },
+  "usage": {
+    "input_tokens": 1234,
+    "output_tokens": 100
+  }
+}

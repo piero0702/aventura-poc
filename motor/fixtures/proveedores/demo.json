@@ -1,0 +1,582 @@
+{
+  "perfiles": {
+    "cuenta.ficticia1": {
+      "usuario": "cuenta.ficticia1",
+      "nombre": "Ficticia Uno",
+      "bio": "Nutricionista en Lima",
+      "categoria": "Salud & Nutrición",
+      "followers": 107200,
+      "privada": false,
+      "verificada": true,
+      "existe": true,
+      "posts": [
+        {
+          "id": "1_0",
+          "url": "https://www.instagram.com/reel/FICTICIO1_0/",
+          "tipo": "reel",
+          "fecha": "2026-10-22T12:00:00Z",
+          "likes": 800,
+          "comentarios": 60,
+          "vistas": 27400,
+          "likes_ocultos": false,
+          "caption": "Publicidad @marca.sintetica. Foto @foto.sintetica",
+          "menciones": [
+            "marca.sintetica",
+            "foto.sintetica"
+          ],
+          "coautores": [
+            "foto.sintetica"
+          ],
+          "patrocinado": true,
+          "patrocinadores": [
+            "marca.sintetica"
+          ],
+          "duracion_segundos": 30.0,
+          "audio_url": "https://cdn.example.org/1_0.mp4"
+        },
+        {
+          "id": "1_1",
+          "url": "https://www.instagram.com/reel/FICTICIO1_1/",
+          "tipo": "reel",
+          "fecha": "2026-10-21T12:00:00Z",
+          "likes": 900,
+          "comentarios": 65,
+          "vistas": 28400,
+          "likes_ocultos": false,
+          "caption": "Publicidad @marca.sintetica. Foto @foto.sintetica",
+          "menciones": [
+            "marca.sintetica",
+            "foto.sintetica"
+          ],
+          "coautores": [
+            "foto.sintetica"
+          ],
+          "patrocinado": true,
+          "patrocinadores": [
+            "marca.sintetica"
+          ],
+          "duracion_segundos": 40.0,
+          "audio_url": "https://cdn.example.org/1_1.mp4"
+        },
+        {
+          "id": "1_2",
+          "url": "https://www.instagram.com/reel/FICTICIO1_2/",
+          "tipo": "reel",
+          "fecha": "2026-10-20T12:00:00Z",
+          "likes": 1000,
+          "comentarios": 70,
+          "vistas": 29400,
+          "likes_ocultos": false,
+          "caption": "Publicidad @marca.sintetica. Foto @foto.sintetica",
+          "menciones": [
+            "marca.sintetica",
+            "foto.sintetica"
+          ],
+          "coautores": [
+            "foto.sintetica"
+          ],
+          "patrocinado": true,
+          "patrocinadores": [
+            "marca.sintetica"
+          ],
+          "duracion_segundos": 50.0,
+          "audio_url": "https://cdn.example.org/1_2.mp4"
+        }
+      ]
+    },
+    "cuenta.ficticia2": {
+      "usuario": "cuenta.ficticia2",
+      "nombre": "Ficticia Dos",
+      "bio": "Chef casero en Lima",
+      "categoria": "Gastronomía",
+      "followers": 54300,
+      "privada": false,
+      "verificada": false,
+      "existe": true,
+      "posts": [
+        {
+          "id": "2_0",
+          "url": "https://www.instagram.com/reel/FICTICIO2_0/",
+          "tipo": "reel",
+          "fecha": "2026-10-22T12:00:00Z",
+          "likes": 1000,
+          "comentarios": 35,
+          "vistas": 14200,
+          "likes_ocultos": false,
+          "caption": "Publicidad @marca.sintetica. Foto @foto.sintetica",
+          "menciones": [
+            "marca.sintetica",
+            "foto.sintetica"
+          ],
+          "coautores": [
+            "foto.sintetica"
+          ],
+          "patrocinado": true,
+          "patrocinadores": [
+            "marca.sintetica"
+          ],
+          "duracion_segundos": 30.0,
+          "audio_url": "https://cdn.example.org/2_0.mp4"
+        },
+        {
+          "id": "2_1",
+          "url": "https://www.instagram.com/reel/FICTICIO2_1/",
+          "tipo": "reel",
+          "fecha": "2026-10-21T12:00:00Z",
+          "likes": 1100,
+          "comentarios": 40,
+          "vistas": 15200,
+          "likes_ocultos": false,
+          "caption": "Publicidad @marca.sintetica. Foto @foto.sintetica",
+          "menciones": [
+            "marca.sintetica",
+            "foto.sintetica"
+          ],
+          "coautores": [
+            "foto.sintetica"
+          ],
+          "patrocinado": true,
+          "patrocinadores": [
+            "marca.sintetica"
+          ],
+          "duracion_segundos": 40.0,
+          "audio_url": "https://cdn.example.org/2_1.mp4"
+        },
+        {
+          "id": "2_2",
+          "url": "https://www.instagram.com/reel/FICTICIO2_2/",
+          "tipo": "reel",
+          "fecha": "2026-10-20T12:00:00Z",
+          "likes": 1200,
+          "comentarios": 45,
+          "vistas": 16200,
+          "likes_ocultos": false,
+          "caption": "Publicidad @marca.sintetica. Foto @foto.sintetica",
+          "menciones": [
+            "marca.sintetica",
+            "foto.sintetica"
+          ],
+          "coautores": [
+            "foto.sintetica"
+          ],
+          "patrocinado": true,
+          "patrocinadores": [
+            "marca.sintetica"
+          ],
+          "duracion_segundos": 50.0,
+          "audio_url": "https://cdn.example.org/2_2.mp4"
+        }
+      ]
+    },
+    "cuenta.ficticia3": {
+      "usuario": "cuenta.ficticia3",
+      "nombre": "Ficticia Tres",
+      "bio": "Gamer y streamer",
+      "categoria": "Gaming",
+      "followers": 230000,
+      "privada": false,
+      "verificada": false,
+      "existe": true,
+      "posts": [
+        {
+          "id": "3_0",
+          "url": "https://www.instagram.com/reel/FICTICIO3_0/",
+          "tipo": "reel",
+          "fecha": "2026-10-22T12:00:00Z",
+          "likes": 2500,
+          "comentarios": 155,
+          "vistas": 89100,
+          "likes_ocultos": false,
+          "caption": "Publicidad @marca.sintetica. Foto @foto.sintetica",
+          "menciones": [
+            "marca.sintetica",
+            "foto.sintetica"
+          ],
+          "coautores": [
+            "foto.sintetica"
+          ],
+          "patrocinado": true,
+          "patrocinadores": [
+            "marca.sintetica"
+          ],
+          "duracion_segundos": 30.0,
+          "audio_url": "https://cdn.example.org/3_0.mp4"
+        },
+        {
+          "id": "3_1",
+          "url": "https://www.instagram.com/reel/FICTICIO3_1/",
+          "tipo": "reel",
+          "fecha": "2026-10-21T12:00:00Z",
+          "likes": 2600,
+          "comentarios": 160,
+          "vistas": 90100,
+          "likes_ocultos": false,
+          "caption": "Publicidad @marca.sintetica. Foto @foto.sintetica",
+          "menciones": [
+            "marca.sintetica",
+            "foto.sintetica"
+          ],
+          "coautores": [
+            "foto.sintetica"
+          ],
+          "patrocinado": true,
+          "patrocinadores": [
+            "marca.sintetica"
+          ],
+          "duracion_segundos": 40.0,
+          "audio_url": "https://cdn.example.org/3_1.mp4"
+        },
+        {
+          "id": "3_2",
+          "url": "https://www.instagram.com/reel/FICTICIO3_2/",
+          "tipo": "reel",
+          "fecha": "2026-10-20T12:00:00Z",
+          "likes": 2700,
+          "comentarios": 165,
+          "vistas": 91100,
+          "likes_ocultos": false,
+          "caption": "Publicidad @marca.sintetica. Foto @foto.sintetica",
+          "menciones": [
+            "marca.sintetica",
+            "foto.sintetica"
+          ],
+          "coautores": [
+            "foto.sintetica"
+          ],
+          "patrocinado": true,
+          "patrocinadores": [
+            "marca.sintetica"
+          ],
+          "duracion_segundos": 50.0,
+          "audio_url": "https://cdn.example.org/3_2.mp4"
+        }
+      ]
+    },
+    "cuenta.ficticia4": {
+      "usuario": "cuenta.ficticia4",
+      "nombre": "Ficticia Cuatro",
+      "bio": "Mamá y lifestyle",
+      "categoria": "Lifestyle",
+      "followers": 18900,
+      "privada": true,
+      "verificada": false,
+      "existe": true,
+      "posts": []
+    },
+    "cuenta.ficticia5": {
+      "usuario": "cuenta.ficticia5",
+      "nombre": "",
+      "bio": "",
+      "categoria": "",
+      "followers": 0,
+      "privada": false,
+      "verificada": false,
+      "existe": false,
+      "posts": []
+    }
+  },
+  "seguidores": {
+    "cuenta.ficticia1": [
+      {
+        "usuario": "persona.uno",
+        "nombre": "Persona sintética Uno",
+        "bio": "",
+        "privada": false,
+        "verificada": false
+      },
+      {
+        "usuario": "persona.dos",
+        "nombre": "Persona sintética Dos",
+        "bio": "",
+        "privada": false,
+        "verificada": false
+      },
+      {
+        "usuario": "tienda.sintetica",
+        "nombre": "Tienda sintética",
+        "bio": "",
+        "privada": false,
+        "verificada": false
+      }
+    ],
+    "cuenta.ficticia2": [
+      {
+        "usuario": "persona.uno",
+        "nombre": "Persona sintética Uno",
+        "bio": "",
+        "privada": false,
+        "verificada": false
+      },
+      {
+        "usuario": "persona.dos",
+        "nombre": "Persona sintética Dos",
+        "bio": "",
+        "privada": false,
+        "verificada": false
+      },
+      {
+        "usuario": "tienda.sintetica",
+        "nombre": "Tienda sintética",
+        "bio": "",
+        "privada": false,
+        "verificada": false
+      }
+    ],
+    "cuenta.ficticia3": [
+      {
+        "usuario": "persona.uno",
+        "nombre": "Persona sintética Uno",
+        "bio": "",
+        "privada": false,
+        "verificada": false
+      },
+      {
+        "usuario": "persona.dos",
+        "nombre": "Persona sintética Dos",
+        "bio": "",
+        "privada": false,
+        "verificada": false
+      },
+      {
+        "usuario": "tienda.sintetica",
+        "nombre": "Tienda sintética",
+        "bio": "",
+        "privada": false,
+        "verificada": false
+      }
+    ],
+    "cuenta.ficticia4": [
+      {
+        "usuario": "persona.uno",
+        "nombre": "Persona sintética Uno",
+        "bio": "",
+        "privada": false,
+        "verificada": false
+      },
+      {
+        "usuario": "persona.dos",
+        "nombre": "Persona sintética Dos",
+        "bio": "",
+        "privada": false,
+        "verificada": false
+      },
+      {
+        "usuario": "tienda.sintetica",
+        "nombre": "Tienda sintética",
+        "bio": "",
+        "privada": false,
+        "verificada": false
+      }
+    ]
+  },
+  "seguidos": {
+    "referencia.sintetica": [
+      {
+        "usuario": "cuenta.ficticia1",
+        "nombre": "",
+        "bio": "",
+        "privada": false,
+        "verificada": false
+      },
+      {
+        "usuario": "cuenta.ficticia2",
+        "nombre": "",
+        "bio": "",
+        "privada": false,
+        "verificada": false
+      },
+      {
+        "usuario": "cuenta.ficticia3",
+        "nombre": "",
+        "bio": "",
+        "privada": false,
+        "verificada": false
+      },
+      {
+        "usuario": "cuenta.ficticia4",
+        "nombre": "",
+        "bio": "",
+        "privada": false,
+        "verificada": false
+      },
+      {
+        "usuario": "cuenta.ficticia5",
+        "nombre": "",
+        "bio": "",
+        "privada": false,
+        "verificada": false
+      }
+    ]
+  },
+  "reels": {},
+  "clasificaciones": {
+    "cuenta.ficticia1": {
+      "categoria": "Salud & Nutrición",
+      "marcas": [
+        {
+          "nombre": "marca.sintetica",
+          "tipo": "publicidad",
+          "post_evidencia": "https://www.instagram.com/reel/FICTICIO1_0/"
+        },
+        {
+          "nombre": "foto.sintetica",
+          "tipo": "amigo_fotografo",
+          "post_evidencia": "https://www.instagram.com/reel/FICTICIO1_0/"
+        }
+      ],
+      "audiencia_a": {
+        "edad": "25-34",
+        "genero": "Female",
+        "ciudad": "Lima"
+      },
+      "seguidores": [
+        {
+          "usuario": "persona.uno",
+          "edad": "25-34",
+          "genero": "Female",
+          "persona_real": true
+        },
+        {
+          "usuario": "persona.dos",
+          "edad": "25-34",
+          "genero": "Female",
+          "persona_real": true
+        },
+        {
+          "usuario": "tienda.sintetica",
+          "edad": null,
+          "genero": null,
+          "persona_real": false
+        }
+      ],
+      "encaje": 4,
+      "motivo_encaje": "Contenido relacionado con el público del brief."
+    },
+    "cuenta.ficticia2": {
+      "categoria": "Gastronomía",
+      "marcas": [
+        {
+          "nombre": "marca.sintetica",
+          "tipo": "publicidad",
+          "post_evidencia": "https://www.instagram.com/reel/FICTICIO2_0/"
+        },
+        {
+          "nombre": "foto.sintetica",
+          "tipo": "amigo_fotografo",
+          "post_evidencia": "https://www.instagram.com/reel/FICTICIO2_0/"
+        }
+      ],
+      "audiencia_a": {
+        "edad": "25-34",
+        "genero": "Female",
+        "ciudad": "Lima"
+      },
+      "seguidores": [
+        {
+          "usuario": "persona.uno",
+          "edad": "25-34",
+          "genero": "Female",
+          "persona_real": true
+        },
+        {
+          "usuario": "persona.dos",
+          "edad": "25-34",
+          "genero": "Female",
+          "persona_real": true
+        },
+        {
+          "usuario": "tienda.sintetica",
+          "edad": null,
+          "genero": null,
+          "persona_real": false
+        }
+      ],
+      "encaje": 4,
+      "motivo_encaje": "Contenido relacionado con el público del brief."
+    },
+    "cuenta.ficticia3": {
+      "categoria": "Gaming",
+      "marcas": [
+        {
+          "nombre": "marca.sintetica",
+          "tipo": "publicidad",
+          "post_evidencia": "https://www.instagram.com/reel/FICTICIO3_0/"
+        },
+        {
+          "nombre": "foto.sintetica",
+          "tipo": "amigo_fotografo",
+          "post_evidencia": "https://www.instagram.com/reel/FICTICIO3_0/"
+        }
+      ],
+      "audiencia_a": {
+        "edad": "18-24",
+        "genero": "Male",
+        "ciudad": "Lima"
+      },
+      "seguidores": [
+        {
+          "usuario": "persona.uno",
+          "edad": "18-24",
+          "genero": "Male",
+          "persona_real": true
+        },
+        {
+          "usuario": "persona.dos",
+          "edad": "18-24",
+          "genero": "Male",
+          "persona_real": true
+        },
+        {
+          "usuario": "tienda.sintetica",
+          "edad": null,
+          "genero": null,
+          "persona_real": false
+        }
+      ],
+      "encaje": 4,
+      "motivo_encaje": "Contenido relacionado con el público del brief."
+    },
+    "cuenta.ficticia4": {
+      "categoria": "Lifestyle",
+      "marcas": [
+        {
+          "nombre": "marca.sintetica",
+          "tipo": "publicidad",
+          "post_evidencia": "https://www.instagram.com/reel/FICTICIO4_0/"
+        },
+        {
+          "nombre": "foto.sintetica",
+          "tipo": "amigo_fotografo",
+          "post_evidencia": "https://www.instagram.com/reel/FICTICIO4_0/"
+        }
+      ],
+      "audiencia_a": {
+        "edad": null,
+        "genero": null,
+        "ciudad": "Lima"
+      },
+      "seguidores": [
+        {
+          "usuario": "persona.uno",
+          "edad": null,
+          "genero": null,
+          "persona_real": true
+        },
+        {
+          "usuario": "persona.dos",
+          "edad": null,
+          "genero": null,
+          "persona_real": true
+        },
+        {
+          "usuario": "tienda.sintetica",
+          "edad": null,
+          "genero": null,
+          "persona_real": false
+        }
+      ],
+      "encaje": 4,
+      "motivo_encaje": "Contenido relacionado con el público del brief."
+    }
+  }
+}

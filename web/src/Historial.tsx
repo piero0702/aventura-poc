@@ -1,0 +1,25 @@
+import { useEffect, useState } from 'react';
+import { ArrowRight, ArrowUpRight, Clock3, Plus, Search } from 'lucide-react';
+import { obtenerListas } from './api';
+import { Acuarela, Boton, Chip, CifraGrande, Esqueleto, Etiqueta, Monograma, Tarjeta } from './componentes';
+import { formatearDuracion, formatearFecha, formatearUSD } from './utilidades';
+import type { EstadoCorrida, ResumenLista } from './tipos';
+
+const estados: Record<EstadoCorrida, string> = { completa: 'Lista completa', parcial: 'Lista parcial', error: 'Por reintentar', interrumpida: 'Interrumpida', pendiente: 'En espera', en_proceso: 'En proceso', estimada: 'Costo estimado' };
+
+export default function Historial({ navegar }: { navegar: (ruta: string) => void }) {
+  const [listas, establecerListas] = useState<ResumenLista[] | null>(null);
+  const [error, establecerError] = useState('');
+  const [busqueda, establecerBusqueda] = useState('');
+  const [intento, establecerIntento] = useState(0);
+  useEffect(() => { const controlador = new AbortController(); establecerError(''); void obtenerListas(controlador.signal).then(establecerListas).catch((fallo: unknown) => { if (!controlador.signal.aborted) establecerError(fallo instanceof Error ? fallo.message : 'No pudimos cargar tus listas.'); }); return () => controlador.abort(); }, [intento]);
+  const visibles = listas?.filter((lista) => `${lista.fuente} ${lista.marca} ${estados[lista.estado]}`.toLocaleLowerCase('es-PE').includes(busqueda.toLocaleLowerCase('es-PE')));
+  const terminadas = listas?.filter((lista) => ['completa', 'parcial'].includes(lista.estado)) || [];
+  return <main id="contenido" tabIndex={-1} className="contenedor pagina-historial">
+    <div className="titulo-con-accion"><div><Etiqueta>Tu espacio de trabajo</Etiqueta><h1>Mis listas<span className="punto-lila">.</span></h1><p>Cada búsqueda, una nueva posibilidad de conectar.</p></div><Boton onClick={() => navegar('/')}><Plus size={17} /> Nueva lista</Boton></div>
+    <section className="historial-resumen"><div className="historial-acuarela"><Acuarela variante="lila" /><div><Etiqueta>Menos pestañas abiertas. Más ideas.</Etiqueta><h2>Las buenas conexiones<br />se quedan aquí.</h2><span>Vuelve a tus listas y encuentra tu siguiente match.</span><Monograma /></div></div><Tarjeta><CifraGrande valor={listas?.length ?? '—'} etiqueta="listas en tu espacio" /><span className="mini-linea" /><CifraGrande valor={listas ? terminadas.reduce((suma, lista) => suma + (lista.perfiles_procesados ?? 0), 0) : '—'} etiqueta="perfiles revisados" /></Tarjeta></section>
+    <div className="barra-historial"><h2>Todas tus listas <span>({visibles?.length ?? '—'})</span></h2><label className="buscador-historial"><Search size={17} /><input aria-label="Buscar en mis listas" placeholder="Busca una cuenta o marca" value={busqueda} onChange={(evento) => establecerBusqueda(evento.target.value)} /></label></div>
+    {error ? <Tarjeta className="estado-vacio"><h2>No pudimos cargar tus listas</h2><p role="alert">{error}</p><Boton variante="secundaria" onClick={() => establecerIntento(intento + 1)}>Volver a intentar</Boton></Tarjeta> : !listas ? <div role="status" aria-label="Cargando tus listas">{[0, 1, 2].map((fila) => <Esqueleto key={fila} className="esqueleto-fila" />)}</div> : !visibles?.length ? <Tarjeta className="estado-vacio"><Acuarela variante="lima" /><div><h2>{busqueda ? 'Todavía no encontramos esa lista' : 'Tu próxima lista empieza aquí'}</h2><p>{busqueda ? 'Prueba con otra cuenta o marca.' : 'Danos una cuenta de referencia y armamos el resto.'}</p><Boton onClick={() => busqueda ? establecerBusqueda('') : navegar('/')}>{busqueda ? 'Limpiar búsqueda' : 'Armar lista'}<ArrowRight size={16} /></Boton></div></Tarjeta> : <div className="tabla-historial" role="region" aria-label="Historial de listas" tabIndex={0}><table><thead><tr><th>Fuente / marca</th><th>Fecha</th><th>Estado</th><th>Perfiles</th><th>Costo</th><th>Duración</th><th><span className="sr-only">Abrir lista</span></th></tr></thead><tbody>{visibles.map((lista) => <tr key={lista.id}><td><a href={`/listas/${lista.id}`} onClick={(evento) => { evento.preventDefault(); navegar(`/listas/${lista.id}`); }}><span className="historial-icono">{lista.fuente.startsWith('@') ? '@' : <Clock3 size={19} />}</span><span><strong>{lista.marca || 'Lista sin brief'}</strong><small>{lista.fuente}</small></span></a></td><td>{formatearFecha(lista.fecha)}</td><td><Chip className={`estado-${lista.estado}`}>{estados[lista.estado]}</Chip></td><td>{lista.perfiles_procesados ?? '—'}</td><td>{formatearUSD(lista.costo_total_usd, 2)}</td><td>{formatearDuracion(lista.duracion_segundos)}</td><td><a className="abrir-lista" aria-label={`Abrir lista de ${lista.fuente}`} href={`/listas/${lista.id}`} onClick={(evento) => { evento.preventDefault(); navegar(`/listas/${lista.id}`); }}><ArrowUpRight size={19} /></a></td></tr>)}</tbody></table></div>}
+    <p className="historial-nota">Cada lista conserva su brief, sus métricas y su archivo Excel.</p>
+  </main>;
+}

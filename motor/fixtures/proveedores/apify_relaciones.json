@@ -1,0 +1,29 @@
+[
+  {
+    "username_scrape": "cuenta.ficticia1",
+    "type": "Followers",
+    "id": "s1",
+    "username": "persona.uno",
+    "full_name": "Persona sintética Uno",
+    "is_private": false,
+    "is_verified": false
+  },
+  {
+    "username_scrape": "cuenta.ficticia1",
+    "type": "Followers",
+    "id": "s2",
+    "username": "persona.dos",
+    "full_name": "Persona sintética Dos",
+    "is_private": false,
+    "is_verified": false
+  },
+  {
+    "username_scrape": "cuenta.ficticia1",
+    "type": "Followers",
+    "id": "s3",
+    "username": "tienda.sintetica",
+    "full_name": "Tienda sintética",
+    "is_private": false,
+    "is_verified": false
+  }
+]

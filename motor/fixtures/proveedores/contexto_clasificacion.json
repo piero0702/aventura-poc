@@ -1,0 +1,97 @@
+{
+  "perfil": {
+    "usuario": "cuenta.ficticia1",
+    "nombre": "Ficticia Uno",
+    "bio": "Nutricionista en Lima. Contenido para mujeres adultas.",
+    "categoria": "Nutritionist",
+    "followers": 107200,
+    "privada": false,
+    "verificada": true,
+    "existe": true,
+    "posts": [
+      {
+        "id": "reel1",
+        "url": "https://www.instagram.com/reel/PRUEBA1/",
+        "tipo": "reel",
+        "fecha": "2026-10-20T12:00:00.000Z",
+        "likes": 900,
+        "comentarios": 65,
+        "vistas": 28400,
+        "likes_ocultos": false,
+        "caption": "Publicidad @marca.sintetica. Foto @foto.sintetica",
+        "menciones": [
+          "marca.sintetica",
+          "foto.sintetica",
+          "marca.sintetica."
+        ],
+        "coautores": [
+          "foto.sintetica"
+        ],
+        "patrocinado": true,
+        "patrocinadores": [
+          "marca.sintetica"
+        ],
+        "duracion_segundos": 60.0,
+        "audio_url": "https://cdn.example.org/audio1.mp4"
+      },
+      {
+        "id": "oculto",
+        "url": "https://www.instagram.com/reel/OCULTO/",
+        "tipo": "reel",
+        "fecha": "2026-10-20T12:00:00.000Z",
+        "likes": null,
+        "comentarios": 65,
+        "vistas": 28400,
+        "likes_ocultos": true,
+        "caption": "Publicidad @marca.sintetica. Foto @foto.sintetica",
+        "menciones": [
+          "marca.sintetica",
+          "foto.sintetica",
+          "marca.sintetica."
+        ],
+        "coautores": [
+          "foto.sintetica"
+        ],
+        "patrocinado": true,
+        "patrocinadores": [
+          "marca.sintetica"
+        ],
+        "duracion_segundos": 60.0,
+        "audio_url": "https://cdn.example.org/audio1.mp4"
+      }
+    ]
+  },
+  "transcripciones": {
+    "https://www.instagram.com/reel/PRUEBA1/": "Publicidad para mujeres adultas de Lima"
+  },
+  "seguidores": [
+    {
+      "usuario": "persona.uno",
+      "nombre": "Persona Uno",
+      "bio": "Mujer de 29 años en Lima",
+      "privada": false,
+      "verificada": false
+    },
+    {
+      "usuario": "persona.dos",
+      "nombre": "Persona Dos",
+      "bio": "Hombre de 43 años en Lima",
+      "privada": false,
+      "verificada": false
+    },
+    {
+      "usuario": "tienda.sintetica",
+      "nombre": "Tienda Sintética",
+      "bio": "Catálogo de nuestra tienda",
+      "privada": false,
+      "verificada": false
+    }
+  ],
+  "brief": {
+    "marca": "marca.sintetica",
+    "publico_objetivo": "Mujeres adultas en Lima",
+    "marcas_a_evitar": [],
+    "followers_min": 0,
+    "followers_max": null
+  }
+}

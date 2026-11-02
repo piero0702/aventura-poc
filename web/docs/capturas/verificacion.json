@@ -1,0 +1,153 @@
+{
+  "origen": "http://127.0.0.1:5173",
+  "pantallas": [
+    {
+      "pantalla": "01-nueva-lista",
+      "ancho": 1440,
+      "alto": 900,
+      "sinDesborde": true
+    },
+    {
+      "pantalla": "03-resultados",
+      "ancho": 1440,
+      "alto": 900,
+      "sinDesborde": true
+    },
+    {
+      "pantalla": "07-resultados-detalle",
+      "ancho": 1440,
+      "alto": 900,
+      "sinDesborde": true
+    },
+    {
+      "pantalla": "08-tabla",
+      "ancho": 1440,
+      "alto": 900,
+      "sinDesborde": true
+    },
+    {
+      "pantalla": "04-ficha-perfil",
+      "ancho": 1440,
+      "alto": 900,
+      "sinDesborde": true
+    },
+    {
+      "pantalla": "05-validacion",
+      "ancho": 1440,
+      "alto": 900,
+      "sinDesborde": true
+    },
+    {
+      "pantalla": "06-historial",
+      "ancho": 1440,
+      "alto": 900,
+      "sinDesborde": true
+    },
+    {
+      "pantalla": "01-nueva-lista",
+      "ancho": 1280,
+      "alto": 800,
+      "sinDesborde": true
+    },
+    {
+      "pantalla": "03-resultados",
+      "ancho": 1280,
+      "alto": 800,
+      "sinDesborde": true
+    },
+    {
+      "pantalla": "07-resultados-detalle",
+      "ancho": 1280,
+      "alto": 800,
+      "sinDesborde": true
+    },
+    {
+      "pantalla": "08-tabla",
+      "ancho": 1280,
+      "alto": 800,
+      "sinDesborde": true
+    },
+    {
+      "pantalla": "04-ficha-perfil",
+      "ancho": 1280,
+      "alto": 800,
+      "sinDesborde": true
+    },
+    {
+      "pantalla": "05-validacion",
+      "ancho": 1280,
+      "alto": 800,
+      "sinDesborde": true
+    },
+    {
+      "pantalla": "06-historial",
+      "ancho": 1280,
+      "alto": 800,
+      "sinDesborde": true
+    },
+    {
+      "pantalla": "01-nueva-lista",
+      "ancho": 1024,
+      "alto": 800,
+      "sinDesborde": true
+    },
+    {
+      "pantalla": "03-resultados",
+      "ancho": 1024,
+      "alto": 800,
+      "sinDesborde": true
+    },
+    {
+      "pantalla": "07-resultados-detalle",
+      "ancho": 1024,
+      "alto": 800,
+      "sinDesborde": true
+    },
+    {
+      "pantalla": "08-tabla",
+      "ancho": 1024,
+      "alto": 800,
+      "sinDesborde": true
+    },
+    {
+      "pantalla": "04-ficha-perfil",
+      "ancho": 1024,
+      "alto": 800,
+      "sinDesborde": true
+    },
+    {
+      "pantalla": "05-validacion",
+      "ancho": 1024,
+      "alto": 800,
+      "sinDesborde": true
+    },
+    {
+      "pantalla": "06-historial",
+      "ancho": 1024,
+      "alto": 800,
+      "sinDesborde": true
+    },
+    {
+      "pantalla": "02-en-proceso",
+      "ancho": 1440,
+      "alto": 900,
+      "sinDesborde": true,
+      "avance": 15
+    },
+    {
+      "pantalla": "02-en-proceso",
+      "ancho": 1280,
+      "alto": 800,
+      "sinDesborde": true,
+      "avance": 15
+    },
+    {
+      "pantalla": "02-en-proceso",
+      "ancho": 1024,
+      "alto": 800,
+      "sinDesborde": true,
+      "avance": 15
+    }
+  ],
+  "erroresConsola": []
+}

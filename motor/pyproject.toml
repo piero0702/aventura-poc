@@ -1,0 +1,26 @@
+[project]
+name = "motor-aventura"
+version = "0.1.0"
+description = "Motor de selección y validación de influencers de Aventura"
+requires-python = ">=3.12,<3.13"
+dependencies = ["httpx>=0.27,<1", "pydantic>=2.10,<3", "python-dotenv>=1,<2", "PyYAML>=6,<7", "openpyxl>=3.1,<4", "typer>=0.15,<1", "fastapi>=0.115,<1", "uvicorn>=0.34,<1"]
+[project.optional-dependencies]
+# Solo pruebas locales; el servicio transcribe con Groq.
+whisper-local = ["faster-whisper>=1.1,<2"]
+[dependency-groups]
+dev = ["pytest>=8,<10", "respx>=0.22,<1"]
+[project.scripts]
+motor = "motor.cli:app"
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+[tool.hatch.build.targets.wheel]
+packages = ["motor"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--strict-markers --basetemp=.motor/pruebas"
+
+[tool.uv]
+# faster-whisper pide av<15, que no compila en Apple Silicon con Python 3.12. El motor decodifica
+# el audio por su cuenta (_decodificar_16k), así que se fuerza un PyAV con ruedas.
+override-dependencies = ["av>=16"]

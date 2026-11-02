@@ -1,0 +1,15 @@
+# USD por unidad. Los valores iniciales son los del encargo, no una cotización vigente.
+apify_perfiles_por_1000: 2.60
+apify_reels_por_1000: 1.00
+# El actor de reels rechaza un tope por corrida menor a esto (HTTP 400, probado el 27-oct).
+apify_reels_minimo_por_corrida: 0.0073
+apify_seguidores_por_1000: 0.85
+groq_por_hora: 0.04
+groq_minimo_segundos: 10
+# Whisper local (solo pruebas): corre en la máquina, sin costo por uso.
+whisper_local_por_hora: 0
+whisper_local_minimo_segundos: 0
+jev_entrada_por_millon: 0.042
+# Completar las DOS tarifas del modelo elegido antes de habilitar OpenRouter.
+openrouter_entrada_por_millon: null
+openrouter_salida_por_millon: null

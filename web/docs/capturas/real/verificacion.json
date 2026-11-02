@@ -1,0 +1,21 @@
+{
+  "fecha": "2026-10-28T04:42:15.799Z",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "fuente": "Motor Python real con proveedores simulados, sin mock web",
+  "pasos_observados": [
+    "transcripcion",
+    "filtro",
+    "clasificacion",
+    "excel"
+  ],
+  "perfiles": 3,
+  "columnas_excel": 15,
+  "columnas_auditoria": 8,
+  "criterios": 7,
+  "filas_validacion": 5,
+  "errores_consola": [],
+  "demo_arranque_y_ctrl_c": true
+}

@@ -1,0 +1,94 @@
+{
+  "fecha": "2026-10-28T04:15:46.215Z",
+  "origen": "http://127.0.0.1:5173",
+  "motor": "Mock local con datos sintéticos",
+  "versionAxe": "4.14.0",
+  "reproducir": "Con npm run mock y npm run dev encendidos, ejecuta node scripts/verificar-accesibilidad.mjs",
+  "etiquetasAxe": [
+    "wcag2a",
+    "wcag2aa",
+    "wcag21a",
+    "wcag21aa",
+    "best-practice"
+  ],
+  "estados": [
+    {
+      "pantalla": "Nueva lista",
+      "violaciones": 0,
+      "reglasAprobadas": 45,
+      "movimientoReducido": true
+    },
+    {
+      "pantalla": "Nueva lista con brief y opciones",
+      "violaciones": 0,
+      "reglasAprobadas": 44,
+      "movimientoReducido": true
+    },
+    {
+      "pantalla": "En proceso",
+      "violaciones": 0,
+      "reglasAprobadas": 38,
+      "movimientoReducido": true
+    },
+    {
+      "pantalla": "Resultados en filas",
+      "violaciones": 0,
+      "reglasAprobadas": 40,
+      "movimientoReducido": true
+    },
+    {
+      "pantalla": "Resultados con descartados",
+      "violaciones": 0,
+      "reglasAprobadas": 40,
+      "movimientoReducido": true
+    },
+    {
+      "pantalla": "Resultados en tabla",
+      "violaciones": 0,
+      "reglasAprobadas": 46,
+      "movimientoReducido": true
+    },
+    {
+      "pantalla": "Tabla con descartados",
+      "violaciones": 0,
+      "reglasAprobadas": 46,
+      "movimientoReducido": true
+    },
+    {
+      "pantalla": "Filtros en cajón",
+      "violaciones": 0,
+      "reglasAprobadas": 37,
+      "movimientoReducido": true
+    },
+    {
+      "pantalla": "Ficha del perfil",
+      "violaciones": 0,
+      "reglasAprobadas": 36,
+      "movimientoReducido": true
+    },
+    {
+      "pantalla": "Validación",
+      "violaciones": 0,
+      "reglasAprobadas": 45,
+      "movimientoReducido": true
+    },
+    {
+      "pantalla": "Mis listas",
+      "violaciones": 0,
+      "reglasAprobadas": 42,
+      "movimientoReducido": true
+    }
+  ],
+  "totalEstados": 11,
+  "totalViolaciones": 0,
+  "comprobacionesTeclado": [
+    "Enlace de salto como primer foco",
+    "Contorno de foco visible",
+    "Recorrido de filtros y tabla con Tab",
+    "Foco contenido dentro de la ficha",
+    "Cierre con Escape y restauración del foco de filtros"
+  ],
+  "encabezadosYContenidoPrincipal": true,
+  "erroresConsola": [],
+  "hallazgos": []
+}

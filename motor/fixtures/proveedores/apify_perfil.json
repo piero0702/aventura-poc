@@ -1,0 +1,69 @@
+[
+  {
+    "username": "cuenta.ficticia1",
+    "fullName": "Ficticia Uno",
+    "biography": "Nutricionista en Lima. Contenido para mujeres adultas.",
+    "followersCount": 107200,
+    "businessCategoryName": "Nutritionist",
+    "private": false,
+    "verified": true,
+    "latestPosts": [
+      {
+        "id": "reel1",
+        "url": "https://www.instagram.com/reel/PRUEBA1/",
+        "type": "Video",
+        "productType": "clips",
+        "caption": "Publicidad @marca.sintetica. Foto @foto.sintetica",
+        "likesCount": 900,
+        "commentsCount": 65,
+        "videoViewCount": 28400,
+        "timestamp": "2026-10-20T12:00:00.000Z",
+        "videoDuration": 60,
+        "audioUrl": "https://cdn.example.org/audio1.mp4",
+        "mentions": [
+          "marca.sintetica",
+          "foto.sintetica"
+        ],
+        "coauthorProducers": [
+          {
+            "username": "foto.sintetica"
+          }
+        ],
+        "paidPartnership": true,
+        "sponsors": [
+          {
+            "username": "marca.sintetica"
+          }
+        ]
+      },
+      {
+        "id": "oculto",
+        "url": "https://www.instagram.com/reel/OCULTO/",
+        "type": "Video",
+        "productType": "clips",
+        "caption": "Publicidad @marca.sintetica. Foto @foto.sintetica",
+        "likesCount": -1,
+        "commentsCount": 65,
+        "videoViewCount": 28400,
+        "timestamp": "2026-10-20T12:00:00.000Z",
+        "videoDuration": 60,
+        "audioUrl": "https://cdn.example.org/audio1.mp4",
+        "mentions": [
+          "marca.sintetica",
+          "foto.sintetica"
+        ],
+        "coauthorProducers": [
+          {
+            "username": "foto.sintetica"
+          }
+        ],
+        "paidPartnership": true,
+        "sponsors": [
+          {
+            "username": "marca.sintetica"
+          }
+        ]
+      }
+    ]
+  }
+]
