@@ -27,6 +27,20 @@ describe('nueva lista', () => {
     expect(crearSimulado.mock.calls[0][0]).toMatchObject({ reels: 5, reels_revisar: 10, muestra_seguidores: 50, limite: 200, presupuesto_usd: 15 });
   });
 
+  it('en /sin-limites envía los parámetros que escribe Praxia', async () => {
+    render(<NuevaLista navegar={vi.fn()} sinLimites />);
+    fireEvent.change(screen.getByLabelText('Cuenta de referencia'), { target: { value: formularioPrueba.referencia } });
+    fireEvent.change(screen.getByLabelText('Reels de publicidad a transcribir (0–10)'), { target: { value: '2' } });
+    fireEvent.change(screen.getByLabelText('Reels recientes a revisar (0–100)'), { target: { value: '20' } });
+    fireEvent.change(screen.getByLabelText('Seguidores en la muestra'), { target: { value: '300' } });
+    fireEvent.change(screen.getByLabelText('Límite de perfiles'), { target: { value: '' } });
+    fireEvent.change(screen.getByLabelText('Presupuesto (USD)'), { target: { value: '40' } });
+    fireEvent.click(screen.getByRole('button', { name: 'Armar lista' }));
+    await waitFor(() => expect(crearSimulado).toHaveBeenCalled());
+    expect(crearSimulado.mock.calls[0][0]).toMatchObject({ reels: 2, reels_revisar: 20, muestra_seguidores: 300, presupuesto_usd: 40 });
+    expect(crearSimulado.mock.calls[0][0]).not.toHaveProperty('limite');
+  });
+
   it('omite el brief si no se completó y no ofrece modo prueba por defecto', async () => {
     render(<NuevaLista navegar={vi.fn()} />);
     fireEvent.change(screen.getByLabelText('Cuenta de referencia'), { target: { value: formularioPrueba.referencia } });

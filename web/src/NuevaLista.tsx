@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, type FormEvent, type KeyboardEvent } from 'react';
-import { ArrowRight, ArrowUpRight, AtSign, Check, ChevronDown, CircleHelp, Coins, Layers3, Plus, Sparkles, X } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, AtSign, Check, ChevronDown, CircleHelp, Coins, Layers3, ListChecks, Plus, Sparkles, X } from 'lucide-react';
 import { Acuarela, Boton, Campo, Chip, Etiqueta, Monograma, Tarjeta } from './componentes';
 import { PRODUCTO } from './config';
 import { crearLista, obtenerLista } from './api';
@@ -22,11 +22,12 @@ function esperarActualizacion(senal: AbortSignal): Promise<void> {
 }
 
 // Parámetros internos de Praxia: Aventura no los ve ni los ajusta (se calculan en /calculadora).
+// En la ruta oculta /sin-limites Praxia los edita a mano; estos son los valores con los que parten.
 // Costo-beneficio más bajo: 50 seguidores dan el género de la audiencia al ~96 % en una audiencia 65/35;
 // de los 10 reels más recientes se transcriben solo los de publicidad (hasta 5). ~USD 0.057 por perfil.
 const PARAMETROS = { reels: 5, reels_revisar: 10, muestra_seguidores: 50, limite: 200, presupuesto_usd: 15 };
 
-export default function NuevaLista({ navegar }: { navegar: (ruta: string) => void }) {
+export default function NuevaLista({ navegar, sinLimites = false }: { navegar: (ruta: string) => void; sinLimites?: boolean }) {
   const [modo, establecerModo] = useState<'referencia' | 'usuarios'>('referencia');
   const [fuente, establecerFuente] = useState('');
   const [usuarios, establecerUsuarios] = useState('');
@@ -36,6 +37,11 @@ export default function NuevaLista({ navegar }: { navegar: (ruta: string) => voi
   const [marcas, establecerMarcas] = useState<string[]>([]);
   const [minimo, establecerMinimo] = useState('');
   const [maximo, establecerMaximo] = useState('');
+  const [reels, establecerReels] = useState(String(PARAMETROS.reels));
+  const [reelsRevisar, establecerReelsRevisar] = useState(String(PARAMETROS.reels_revisar));
+  const [muestra, establecerMuestra] = useState(String(PARAMETROS.muestra_seguidores));
+  const [limite, establecerLimite] = useState(String(PARAMETROS.limite));
+  const [presupuesto, establecerPresupuesto] = useState(String(PARAMETROS.presupuesto_usd));
   const [simulado, establecerSimulado] = useState(false);
   const [ocupado, establecerOcupado] = useState<'estimar' | 'armar' | null>(null);
   const [error, establecerError] = useState('');
@@ -51,7 +57,7 @@ export default function NuevaLista({ navegar }: { navegar: (ruta: string) => voi
       peticion.current?.abort();
       peticion.current = null;
     };
-  }, [modo, fuente, usuarios, marca, publico, marcaPendiente, marcas, minimo, maximo, simulado]);
+  }, [modo, fuente, usuarios, marca, publico, marcaPendiente, marcas, minimo, maximo, reels, reelsRevisar, muestra, limite, presupuesto, simulado]);
 
   function agregarMarca() {
     if (marcaPendiente.trim()) establecerMarcas((actual) => [...new Set([...actual, marcaPendiente.trim()])]);
@@ -70,7 +76,10 @@ export default function NuevaLista({ navegar }: { navegar: (ruta: string) => voi
     const parametros: ParametrosLista = {
       referencia: modo === 'referencia' ? referencias[0] : null,
       usuarios: modo === 'usuarios' ? normalizados : null,
-      ...PARAMETROS,
+      ...(sinLimites ? {
+        reels: Number(reels), reels_revisar: Number(reelsRevisar), muestra_seguidores: Number(muestra),
+        ...(limite && { limite: Number(limite) }), ...(presupuesto && { presupuesto_usd: Number(presupuesto) }),
+      } : PARAMETROS),
       estimar, simulado: import.meta.env.VITE_PERMITIR_SIMULADO === 'true' && simulado,
       ...((marca.trim() || publico.trim() || marcas.length || marcaPendiente.trim() || minimo || maximo) && { brief: {
         marca: marca.trim(), publico_objetivo: publico.trim(),
@@ -124,6 +133,7 @@ export default function NuevaLista({ navegar }: { navegar: (ruta: string) => voi
             {modo === 'referencia' ? <><label htmlFor="referencia">Cuenta de referencia</label><div className="campo-con-icono"><AtSign size={17} aria-hidden="true" /><input id="referencia" placeholder="Ej. casa.bruma" value={fuente} onChange={(evento) => establecerFuente(evento.target.value)} autoComplete="off" aria-describedby="ayuda-referencia" /></div><p id="ayuda-referencia" className="ayuda"><CircleHelp size={13} /> Revisaremos los perfiles que sigue esta cuenta.</p></> : <><label htmlFor="usuarios">Usuarios, uno por línea</label><textarea id="usuarios" rows={4} placeholder={'@sol.alvica\nnilo.caminos\nhttps://instagram.com/vela.paleta'} value={usuarios} onChange={(evento) => establecerUsuarios(evento.target.value)} aria-describedby="ayuda-usuarios" /><p id="ayuda-usuarios" className="ayuda">{normalizados.length} usuarios únicos · Aceptamos @ y enlaces de perfil.</p></>}
           </div>
           <details className="plegable"><summary><span><Layers3 size={17} /> Brief de la marca <span className="opcional">Opcional</span></span><ChevronDown size={17} /></summary><div className="plegable-interior"><Campo etiqueta="Marca" placeholder="Ej. Bruma Estudio" value={marca} onChange={(evento) => establecerMarca(evento.target.value)} /><div className="campo-grupo"><label htmlFor="publico">¿Con quién quieres conectar?</label><textarea id="publico" rows={2} placeholder="Ej. mujeres de 25 a 34 años en Lima, interesadas en moda consciente" value={publico} onChange={(evento) => establecerPublico(evento.target.value)} /></div><div className="campo-grupo"><label htmlFor="evitar">Marcas a evitar</label><div className="entrada-chips">{marcas.map((nombre) => <Chip key={nombre}>{nombre}<button type="button" aria-label={`Quitar ${nombre}`} onClick={() => establecerMarcas(marcas.filter((otra) => otra !== nombre))}><X size={12} /></button></Chip>)}<input id="evitar" placeholder="Escribe una marca y presiona Enter" value={marcaPendiente} onChange={(evento) => establecerMarcaPendiente(evento.target.value)} onKeyDown={teclaMarca} /><button type="button" aria-label="Agregar marca a evitar" onClick={agregarMarca}><Plus size={16} /></button></div></div><div className="dos-campos"><Campo etiqueta="Followers mínimos" type="number" min="0" value={minimo} onChange={(evento) => establecerMinimo(evento.target.value)} /><Campo etiqueta="Followers máximos" type="number" min="0" value={maximo} onChange={(evento) => establecerMaximo(evento.target.value)} /></div></div></details>
+          {sinLimites && <details className="plegable" open><summary><span><ListChecks size={17} /> Opciones avanzadas <span className="opcional">Solo Praxia</span></span><ChevronDown size={17} /></summary><div className="plegable-interior dos-campos"><Campo etiqueta="Reels de publicidad a transcribir (0–10)" type="number" min="0" max="10" required value={reels} onChange={(evento) => establecerReels(evento.target.value)} /><Campo etiqueta="Reels recientes a revisar (0–100)" type="number" min="0" max="100" required value={reelsRevisar} onChange={(evento) => establecerReelsRevisar(evento.target.value)} /><Campo etiqueta="Seguidores en la muestra" type="number" min="0" required value={muestra} onChange={(evento) => establecerMuestra(evento.target.value)} /><Campo etiqueta="Límite de perfiles" type="number" min="1" value={limite} onChange={(evento) => establecerLimite(evento.target.value)} /><Campo etiqueta="Presupuesto (USD)" type="number" min="0" step="0.01" value={presupuesto} onChange={(evento) => establecerPresupuesto(evento.target.value)} /><p className="ayuda ancho-completo">Vacíos, el límite y el presupuesto no ponen tope. Con 0 reels omites la transcripción; con 0 seguidores, la audiencia se estima desde el contenido. Usa «Calcular costo» antes de armar.</p></div></details>}
           {import.meta.env.VITE_PERMITIR_SIMULADO === 'true' && <label className="control-check"><input type="checkbox" checked={simulado} onChange={(evento) => establecerSimulado(evento.target.checked)} /> Modo prueba (sin costo)</label>}
           {!import.meta.env.VITE_MOTOR_TOKEN?.trim() && <p role="status" className="mensaje-error">Falta el token del motor. Configura VITE_MOTOR_TOKEN en web/.env.local y reinicia la web.</p>}
           {error && <p role="alert" className="mensaje-error">{error}</p>}
